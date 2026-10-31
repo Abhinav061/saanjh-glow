@@ -114,19 +114,18 @@ export interface LookbookPhoto {
   `],
   template: `
     <!-- Top Announcement Bar -->
-    <div class="bg-[#241109] text-[#F5E6CC] text-xs sm:text-sm py-2.5 px-4 border-b border-[#D4A359]/25">
-      <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
-        <div class="flex items-center gap-2">
-          <span class="inline-block w-2 h-2 rounded-full bg-[#E5A93C] animate-pulse"></span>
-          <span class="tracking-wide">
-            <strong class="font-medium text-white">Saanjh Glow</strong> • Handpoured with Love in India • Pan-India Delivery Available
+    <div class="bg-[#241109] text-[#F5E6CC] text-xs sm:text-sm py-2 px-3 sm:px-4 border-b border-[#D4A359]/25">
+      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1.5 text-center sm:text-left">
+        <div class="flex items-center justify-center gap-2">
+          <span class="inline-block w-2 h-2 rounded-full bg-[#E5A93C] animate-pulse flex-shrink-0"></span>
+          <span class="tracking-wide text-xs sm:text-sm">
+            <strong class="font-medium text-white">Saanjh Glow</strong> • Handpoured with Love in India
           </span>
         </div>
-        <div class="flex items-center gap-4">
-          <span class="hidden md:inline text-[#D9C3B0]">Personal Phone Concierge:</span>
+        <div class="flex items-center gap-2">
           <a
             href="tel:+919456221293"
-            class="inline-flex items-center gap-1.5 font-semibold text-[#F7C873] hover:text-white transition-colors underline underline-offset-4"
+            class="inline-flex items-center gap-1.5 font-semibold text-[#F7C873] hover:text-white transition-colors underline underline-offset-4 text-xs sm:text-sm"
           >
             <span>📞 Call to Order: 94562 21293</span>
           </a>
@@ -134,38 +133,38 @@ export interface LookbookPhoto {
       </div>
     </div>
 
-    <!-- Main Luxury Header / Navigation -->
+    <!-- Main Luxury Header / Responsive Navigation -->
     <header class="sticky top-0 z-40 bg-[#FAF5EE]/95 backdrop-blur-md border-b border-[#E2D3C1]">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
-        <!-- Brand Logo & Crest (Using Official Logo img_12_28_01_1) -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between gap-3">
+        <!-- Brand Logo & Crest -->
         <button
           type="button"
           (click)="setPage('story')"
-          class="flex items-center gap-3.5 text-left group focus:outline-none"
+          class="flex items-center gap-2.5 sm:gap-3.5 text-left group focus:outline-none"
         >
           <img
             [src]="imgMap['img_12_28_01_1']"
             alt="Saanjh Glow Official Logo"
-            class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover border-2 border-[#C88A36] shadow-sm group-hover:scale-105 transition-transform"
+            class="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-[#C88A36] shadow-sm group-hover:scale-105 transition-transform flex-shrink-0"
           />
           <div>
-            <span class="block font-serif-luxury text-2xl sm:text-3xl font-bold tracking-tight text-[#2A1810] leading-none">
-              Saanjh <span class="font-normal tracking-widest text-sm sm:text-base text-[#9A5B25] uppercase">Glow</span>
+            <span class="block font-serif-luxury text-xl sm:text-2xl font-bold tracking-tight text-[#2A1810] leading-none">
+              Saanjh <span class="font-normal tracking-widest text-xs sm:text-sm text-[#9A5B25] uppercase">Glow</span>
             </span>
-            <span class="block text-xs italic font-serif-luxury text-[#6E4730] mt-0.5">
+            <span class="block text-[11px] sm:text-xs italic font-serif-luxury text-[#6E4730] mt-0.5">
               “Light up the little moments.”
             </span>
           </div>
         </button>
 
-        <!-- Clean Navigation Pills -->
-        <nav class="flex items-center gap-1 sm:gap-2 bg-[#F1E6D6] p-1.5 rounded-full border border-[#DFCBB2]">
+        <!-- Desktop Navigation Pills -->
+        <nav class="hidden md:flex items-center gap-1 bg-[#F1E6D6] p-1.5 rounded-full border border-[#DFCBB2]">
           <button
             type="button"
             (click)="setPage('story')"
             [class]="activePage() === 'story'
-              ? 'px-3.5 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium bg-[#2A1810] text-[#FAF5EE] shadow-sm transition-all'
-              : 'px-3.5 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium text-[#5A3A28] hover:text-[#2A1810] transition-all'"
+              ? 'px-4 py-2 rounded-full text-xs sm:text-sm font-medium bg-[#2A1810] text-[#FAF5EE] shadow-sm transition-all'
+              : 'px-4 py-2 rounded-full text-xs sm:text-sm font-medium text-[#5A3A28] hover:text-[#2A1810] transition-all'"
           >
             Our Story &amp; Craft
           </button>
@@ -173,8 +172,8 @@ export interface LookbookPhoto {
             type="button"
             (click)="setPage('catalog')"
             [class]="activePage() === 'catalog'
-              ? 'px-3.5 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium bg-[#2A1810] text-[#FAF5EE] shadow-sm transition-all'
-              : 'px-3.5 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium text-[#5A3A28] hover:text-[#2A1810] transition-all'"
+              ? 'px-4 py-2 rounded-full text-xs sm:text-sm font-medium bg-[#2A1810] text-[#FAF5EE] shadow-sm transition-all'
+              : 'px-4 py-2 rounded-full text-xs sm:text-sm font-medium text-[#5A3A28] hover:text-[#2A1810] transition-all'"
           >
             Product Catalog
           </button>
@@ -182,24 +181,75 @@ export interface LookbookPhoto {
             type="button"
             (click)="setPage('contact')"
             [class]="activePage() === 'contact'
-              ? 'px-3.5 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium bg-[#2A1810] text-[#FAF5EE] shadow-sm transition-all'
-              : 'px-3.5 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium text-[#5A3A28] hover:text-[#2A1810] transition-all'"
+              ? 'px-4 py-2 rounded-full text-xs sm:text-sm font-medium bg-[#2A1810] text-[#FAF5EE] shadow-sm transition-all'
+              : 'px-4 py-2 rounded-full text-xs sm:text-sm font-medium text-[#5A3A28] hover:text-[#2A1810] transition-all'"
           >
             Visit &amp; Call to Order
           </button>
         </nav>
 
-        <!-- Header Direct Call CTA -->
-        <div class="hidden lg:flex items-center gap-3">
+        <!-- Header Right Actions & Mobile Hamburger -->
+        <div class="flex items-center gap-2">
           <a
             href="tel:+919456221293"
-            class="inline-flex items-center gap-2.5 bg-gradient-to-r from-[#8C4A1E] to-[#B86B2B] hover:from-[#733B16] hover:to-[#9E5920] text-white px-5 py-2.5 rounded-full text-sm font-medium shadow-md transition-all"
+            class="hidden lg:inline-flex items-center gap-2 bg-gradient-to-r from-[#8C4A1E] to-[#B86B2B] hover:from-[#733B16] hover:to-[#9E5920] text-white px-4 py-2 rounded-full text-xs font-medium shadow-md transition-all"
           >
             <span>📞 Call to Order</span>
-            <span class="font-semibold tracking-wide border-l border-white/30 pl-2">94562 21293</span>
+            <span class="font-semibold border-l border-white/30 pl-2">94562 21293</span>
           </a>
+
+          <!-- Mobile Menu Toggle Button -->
+          <button
+            type="button"
+            (click)="toggleMobileMenu()"
+            class="md:hidden p-2 rounded-xl bg-[#F1E6D6] text-[#2A1810] border border-[#DFCBB2] text-base focus:outline-none"
+            aria-label="Toggle Navigation Menu"
+          >
+            {{ mobileMenuOpen() ? '✕' : '☰' }}
+          </button>
         </div>
       </div>
+
+      <!-- Mobile Expandable Navigation Menu -->
+      @if (mobileMenuOpen()) {
+        <div class="md:hidden bg-[#FAF5EE] border-t border-[#E2D3C1] px-4 py-3 space-y-2 shadow-lg animate-fadeIn">
+          <button
+            type="button"
+            (click)="setPage('story'); toggleMobileMenu()"
+            [class]="activePage() === 'story'
+              ? 'w-full text-left px-4 py-2.5 rounded-xl text-sm font-semibold bg-[#2A1810] text-[#FAF5EE]'
+              : 'w-full text-left px-4 py-2.5 rounded-xl text-sm font-medium text-[#5A3A28] hover:bg-[#F1E6D6]'"
+          >
+            📖 Our Story &amp; Craft
+          </button>
+          <button
+            type="button"
+            (click)="setPage('catalog'); toggleMobileMenu()"
+            [class]="activePage() === 'catalog'
+              ? 'w-full text-left px-4 py-2.5 rounded-xl text-sm font-semibold bg-[#2A1810] text-[#FAF5EE]'
+              : 'w-full text-left px-4 py-2.5 rounded-xl text-sm font-medium text-[#5A3A28] hover:bg-[#F1E6D6]'"
+          >
+            🕯️ Product Catalog
+          </button>
+          <button
+            type="button"
+            (click)="setPage('contact'); toggleMobileMenu()"
+            [class]="activePage() === 'contact'
+              ? 'w-full text-left px-4 py-2.5 rounded-xl text-sm font-semibold bg-[#2A1810] text-[#FAF5EE]'
+              : 'w-full text-left px-4 py-2.5 rounded-xl text-sm font-medium text-[#5A3A28] hover:bg-[#F1E6D6]'"
+          >
+            📞 Visit &amp; Call to Order
+          </button>
+          <div class="pt-2 border-t border-[#E2D3C1]">
+            <a
+              href="tel:+919456221293"
+              class="block w-full text-center py-2.5 px-4 rounded-xl bg-gradient-to-r from-[#8C4A1E] to-[#B86B2B] text-white font-semibold text-xs shadow-md"
+            >
+              📞 Call to Order: 94562 21293
+            </a>
+          </div>
+        </div>
+      }
     </header>
 
     <!-- Toast Notification Banner -->
@@ -218,7 +268,7 @@ export interface LookbookPhoto {
     }
 
     <!-- =================================================================== -->
-    <!-- PAGE 1: OUR STORY & CRAFT (Warm, Emotional Storytelling Experience) -->
+    <!-- PAGE 1: OUR STORY & CRAFT -->
     <!-- =================================================================== -->
     @if (activePage() === 'story') {
       <main>
@@ -226,7 +276,6 @@ export interface LookbookPhoto {
         <section class="twilight-gradient text-[#FAF5EE] relative overflow-hidden py-14 sm:py-20 lg:py-24">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-              <!-- Left Emotional Narrative Column -->
               <div class="lg:col-span-7 space-y-6">
                 <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-[#E5A93C]/35 text-[#F7C873] text-xs uppercase tracking-widest">
                   <span>🕯️ Handpoured Artisanal Candles • Made in India</span>
@@ -240,7 +289,6 @@ export interface LookbookPhoto {
                   In Indian homes, <em class="text-white font-serif-luxury text-xl">Saanjh</em> is the sacred twilight hour—the quiet pause when the day’s rush melts away, a wick is lit, and ordinary corners turn into sanctuaries of memory, prayer, and togetherness. Every <strong class="text-white font-medium">Saanjh Glow</strong> creation is hand-poured in small batches with 100% natural soy and premium wax blends to light up your little moments.
                 </p>
 
-                <!-- Primary CTAs -->
                 <div class="flex flex-wrap items-center gap-4 pt-2">
                   <button
                     type="button"
@@ -259,7 +307,6 @@ export interface LookbookPhoto {
                   </a>
                 </div>
 
-                <!-- Trust & Craft Highlights -->
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-white/15">
                   <div>
                     <div class="font-serif-luxury text-2xl sm:text-3xl text-[#F7C873] font-semibold">100%</div>
@@ -280,7 +327,6 @@ export interface LookbookPhoto {
                 </div>
               </div>
 
-              <!-- Right Visual Composition -->
               <div class="lg:col-span-5">
                 <div class="relative mx-auto max-w-md lg:max-w-none">
                   <div class="rounded-3xl overflow-hidden border-2 border-[#E5A93C]/40 shadow-2xl bg-[#1A0C06]">
@@ -290,7 +336,6 @@ export interface LookbookPhoto {
                       class="w-full h-auto object-cover"
                     />
                   </div>
-                  <!-- Floating Brand Badge -->
                   <div class="mt-4 sm:mt-0 sm:absolute sm:-bottom-5 sm:-left-5 bg-[#FAF5EE] text-[#2A1810] p-4 rounded-2xl shadow-xl border border-[#DFCBB2] max-w-xs">
                     <div class="flex items-center gap-3">
                       <img
@@ -314,7 +359,7 @@ export interface LookbookPhoto {
           </div>
         </section>
 
-        <!-- Emotional Chapter 1: The Philosophy of Little Moments -->
+        <!-- Philosophy Section -->
         <section class="py-16 sm:py-20 bg-[#FAF5EE]">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mx-auto text-center space-y-4">
@@ -327,7 +372,6 @@ export interface LookbookPhoto {
               </p>
             </div>
 
-            <!-- 3 Emotional Storytelling Cards -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
               <div class="bg-[#FFFDF9] rounded-3xl overflow-hidden border border-[#E6D7C3] candle-glow flex flex-col">
                 <div class="aspect-[4/3] overflow-hidden bg-[#F3E9DC]">
@@ -423,7 +467,6 @@ export interface LookbookPhoto {
         <section class="py-16 sm:py-20 bg-[#F3E9DC] border-y border-[#E2D3C1]">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              <!-- Left Fragrance Collection Showcase -->
               <div class="lg:col-span-5">
                 <div class="rounded-3xl overflow-hidden border-2 border-[#D4B996] shadow-xl bg-[#FFFDF9]">
                   <img
@@ -434,7 +477,6 @@ export interface LookbookPhoto {
                 </div>
               </div>
 
-              <!-- Right Scent Notes & Botanical Trio -->
               <div class="lg:col-span-7 space-y-6">
                 <div>
                   <span class="text-xs font-semibold uppercase tracking-widest text-[#9A5B25]">Our Fragrance Collection</span>
@@ -464,7 +506,6 @@ export interface LookbookPhoto {
                   }
                 </div>
 
-                <!-- Botanical Trio Highlight (img_12_28_09) -->
                 <div class="bg-[#FFFDF9] rounded-2xl p-5 border border-[#E2D3C1] shadow-sm flex flex-col sm:flex-row items-center gap-5">
                   <img
                     [src]="imgMap['img_12_28_09']"
@@ -488,7 +529,7 @@ export interface LookbookPhoto {
           </div>
         </section>
 
-        <!-- Featured Signature Creations Preview -->
+        <!-- Featured Products Preview -->
         <section class="py-16 sm:py-20 bg-[#FAF5EE]">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
@@ -561,12 +602,11 @@ export interface LookbookPhoto {
     }
 
     <!-- =================================================================== -->
-    <!-- PAGE 2: PRODUCT CATALOG                                             -->
+    <!-- PAGE 2: PRODUCT CATALOG -->
     <!-- =================================================================== -->
     @if (activePage() === 'catalog') {
       <main class="py-10 sm:py-14 bg-[#FAF5EE]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-          <!-- Catalog Hero Banner -->
           <div class="bg-[#2A1810] text-[#FAF5EE] rounded-3xl p-6 sm:p-8 lg:p-10 border border-[#D4A359]/30 shadow-xl">
             <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
               <div class="space-y-2 max-w-2xl">
@@ -592,7 +632,6 @@ export interface LookbookPhoto {
             </div>
           </div>
 
-          <!-- Category Filter Bar & Search -->
           <div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 bg-[#FFFDF9] p-4 rounded-2xl border border-[#E2D3C1] shadow-sm">
             <div class="flex flex-wrap items-center gap-1.5">
               @for (cat of categories; track cat.id) {
@@ -629,12 +668,10 @@ export interface LookbookPhoto {
             </div>
           </div>
 
-          <!-- Product Grid -->
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
             @for (product of filteredProducts(); track product.id) {
               <article class="bg-[#FFFDF9] rounded-3xl overflow-hidden border border-[#E2D3C1] candle-glow candle-glow-hover transition-all flex flex-col justify-between">
                 <div>
-                  <!-- Product Image Container -->
                   <div class="relative aspect-[4/4] bg-[#F3E9DC] overflow-hidden group">
                     <img
                       [src]="getActiveProductImage(product)"
@@ -656,7 +693,6 @@ export interface LookbookPhoto {
                     </button>
                   </div>
 
-                  <!-- Multi-angle Thumbnails -->
                   @if (product.secondaryImages.length > 1) {
                     <div class="px-5 pt-3 flex items-center gap-2 overflow-x-auto">
                       @for (imgUrl of product.secondaryImages; track imgUrl; let idx = $index) {
@@ -674,7 +710,6 @@ export interface LookbookPhoto {
                     </div>
                   }
 
-                  <!-- Card Body -->
                   <div class="p-5 sm:p-6 space-y-3">
                     <div class="flex items-center justify-between gap-2">
                       <span class="text-[11px] font-semibold uppercase tracking-widest text-[#9A5B25]">
@@ -693,7 +728,6 @@ export interface LookbookPhoto {
                       {{ product.story }}
                     </p>
 
-                    <!-- Spec Pills -->
                     <div class="flex flex-wrap gap-1.5 pt-1">
                       @for (spec of product.specs.slice(0, 3); track spec) {
                         <span class="px-2.5 py-0.5 rounded-md bg-[#F3E9DC] text-[#5A3A28] text-[11px]">
@@ -702,7 +736,6 @@ export interface LookbookPhoto {
                       }
                     </div>
 
-                    <!-- Authentic Pricing Section -->
                     <div class="pt-3 border-t border-[#EFE5D8] space-y-2">
                       @if (product.variants.length > 0) {
                         <div class="text-[11px] font-semibold uppercase tracking-wider text-[#6E4730]">
@@ -742,7 +775,6 @@ export interface LookbookPhoto {
                   </div>
                 </div>
 
-                <!-- Card Footer Actions -->
                 <div class="p-5 sm:p-6 pt-0 space-y-2">
                   <div class="flex items-center gap-2">
                     <a
@@ -768,7 +800,7 @@ export interface LookbookPhoto {
             }
           </div>
 
-          <!-- Complete Collection Menu & Price Guide -->
+          <!-- Price Guide Table Section -->
           <section class="bg-[#FFFDF9] rounded-3xl p-6 sm:p-8 border border-[#E2D3C1] candle-glow space-y-5">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div>
@@ -874,12 +906,11 @@ export interface LookbookPhoto {
     }
 
     <!-- =================================================================== -->
-    <!-- PAGE 3: VISIT & CALL TO ORDER                                       -->
+    <!-- PAGE 3: VISIT & CALL TO ORDER -->
     <!-- =================================================================== -->
     @if (activePage() === 'contact') {
       <main class="py-12 sm:py-16 bg-[#FAF5EE]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          <!-- Contact & Phone Ordering Hero Card -->
           <div class="twilight-gradient text-[#FAF5EE] rounded-3xl p-8 sm:p-12 border border-[#D4A359]/35 shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div class="lg:col-span-7 space-y-5">
               <span class="inline-block px-3.5 py-1 rounded-full bg-white/10 text-[#F7C873] text-xs font-semibold uppercase tracking-widest">
@@ -892,7 +923,6 @@ export interface LookbookPhoto {
                 Because our candles are hand-poured to order and customized with your chosen fragrances, jar sizes, and festive ribbon packaging, we take all orders directly over the phone. Call us to place individual orders, customize wedding favors, or curate festive hampers.
               </p>
 
-              <!-- Direct Phone Call & Address Cards -->
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                 <div class="bg-white/10 backdrop-blur-sm p-5 rounded-2xl border border-[#F7C873]/40 space-y-2">
                   <div class="text-xs uppercase tracking-widest text-[#F7C873]">Direct Ordering Line</div>
@@ -960,7 +990,6 @@ export interface LookbookPhoto {
             </div>
           </div>
 
-          <!-- Interactive Phone Order Note / Call Checklist Planner -->
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
             <div class="lg:col-span-7 bg-[#FFFDF9] rounded-3xl p-6 sm:p-8 border border-[#E2D3C1] candle-glow space-y-5">
               <div class="flex items-center justify-between">
@@ -1054,7 +1083,6 @@ export interface LookbookPhoto {
               }
             </div>
 
-            <!-- How Phone Ordering Works & Studio Visit Info -->
             <div class="lg:col-span-5 bg-[#FFFDF9] rounded-3xl p-6 sm:p-8 border border-[#E2D3C1] candle-glow space-y-6">
               <div>
                 <span class="text-xs font-semibold uppercase tracking-widest text-[#9A5B25]">How to Order</span>
@@ -1068,21 +1096,21 @@ export interface LookbookPhoto {
                   <span class="w-7 h-7 rounded-full bg-[#2A1810] text-[#F7C873] font-bold flex items-center justify-center flex-shrink-0 text-xs">1</span>
                   <div>
                     <strong class="text-[#2A1810] block">Choose Your Candles &amp; Scents</strong>
-                    Browse our Festive Specials, Jar Candles (30 ml, 100 ml, 200 ml), Coffee Collection, 7 Chakra Set, or Royal Gift Hampers.
+                    Browse our Festive Specials, Jar Candles, Coffee Collection, 7 Chakra Set, or Royal Gift Hampers.
                   </div>
                 </li>
                 <li class="flex gap-3.5">
                   <span class="w-7 h-7 rounded-full bg-[#2A1810] text-[#F7C873] font-bold flex items-center justify-center flex-shrink-0 text-xs">2</span>
                   <div>
                     <strong class="text-[#2A1810] block">Call Us at 94562 21293</strong>
-                    Tap any <a href="tel:+919456221293" class="text-[#8C4A1E] font-semibold underline">Call to Order (94562 21293)</a> button to confirm your fragrance choices, quantities, and gift wrapping preferences.
+                    Tap any <a href="tel:+919456221293" class="text-[#8C4A1E] font-semibold underline">Call to Order (94562 21293)</a> button to confirm your fragrance choices and quantities.
                   </div>
                 </li>
                 <li class="flex gap-3.5">
                   <span class="w-7 h-7 rounded-full bg-[#2A1810] text-[#F7C873] font-bold flex items-center justify-center flex-shrink-0 text-xs">3</span>
                   <div>
                     <strong class="text-[#2A1810] block">Noida Pickup or Pan-India Delivery</strong>
-                    Collect directly from our studio at <strong class="text-[#2A1810]">A-16/7, Shiv Shakti Apartments, Sector-71, Noida</strong> or have your order safely shipped anywhere in India.
+                    Collect directly from our studio at <strong class="text-[#2A1810]">A-16/7, Shiv Shakti Apartments, Sector-71, Noida</strong> or have your order safely shipped.
                   </div>
                 </li>
               </ol>
@@ -1103,9 +1131,7 @@ export interface LookbookPhoto {
       </main>
     }
 
-    <!-- =================================================================== -->
-    <!-- LUXURY FOOTER (With Official Logo img_12_28_01_1 & Noida Address)   -->
-    <!-- =================================================================== -->
+    <!-- LUXURY FOOTER -->
     <footer class="bg-[#1D0D06] text-[#E5D3C0] border-t border-[#D4A359]/30 py-12 pb-24 sm:pb-12">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-8 border-b border-white/10">
@@ -1129,26 +1155,16 @@ export interface LookbookPhoto {
           <div class="md:col-span-3 space-y-2 text-xs sm:text-sm">
             <div class="font-semibold uppercase tracking-widest text-[#F7C873] text-xs">Explore</div>
             <ul class="space-y-1.5">
-              <li>
-                <button type="button" (click)="setPage('story')" class="hover:text-white transition-colors">Our Story &amp; Craft</button>
-              </li>
-              <li>
-                <button type="button" (click)="setPage('catalog')" class="hover:text-white transition-colors">Product Catalog</button>
-              </li>
-              <li>
-                <button type="button" (click)="setPage('contact')" class="hover:text-white transition-colors">Visit &amp; Call to Order</button>
-              </li>
+              <li><button type="button" (click)="setPage('story')" class="hover:text-white transition-colors">Our Story &amp; Craft</button></li>
+              <li><button type="button" (click)="setPage('catalog')" class="hover:text-white transition-colors">Product Catalog</button></li>
+              <li><button type="button" (click)="setPage('contact')" class="hover:text-white transition-colors">Visit &amp; Call to Order</button></li>
             </ul>
           </div>
 
           <div class="md:col-span-4 space-y-2.5 text-xs sm:text-sm">
             <div class="font-semibold uppercase tracking-widest text-[#F7C873] text-xs">Order via Phone Call</div>
-            <p class="text-white font-medium">
-              📍 A-16/7, Shiv Shakti Apartments, Sector-71, Noida
-            </p>
-            <p>
-              📞 Phone: <a href="tel:+919456221293" class="text-[#F7C873] font-bold hover:underline">94562 21293</a>
-            </p>
+            <p class="text-white font-medium">📍 A-16/7, Shiv Shakti Apartments, Sector-71, Noida</p>
+            <p>📞 Phone: <a href="tel:+919456221293" class="text-[#F7C873] font-bold hover:underline">94562 21293</a></p>
             <div class="pt-1">
               <a
                 href="tel:+919456221293"
@@ -1181,9 +1197,7 @@ export interface LookbookPhoto {
       </a>
     </div>
 
-    <!-- =================================================================== -->
-    <!-- PRODUCT DETAIL MODAL                                                -->
-    <!-- =================================================================== -->
+    <!-- PRODUCT DETAIL MODAL -->
     @if (selectedProduct(); as prod) {
       <div class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
         <div class="bg-[#FAF5EE] text-[#2A1810] rounded-3xl max-w-4xl w-full overflow-hidden border-2 border-[#D4A359] shadow-2xl my-8">
@@ -1230,7 +1244,6 @@ export interface LookbookPhoto {
             <div class="md:col-span-6 space-y-4">
               <p class="text-sm text-[#5A3A28] leading-relaxed">{{ prod.story }}</p>
 
-              <!-- Pricing Box -->
               <div class="bg-[#FFFDF9] p-4 rounded-2xl border border-[#E2D3C1] space-y-2">
                 <div class="text-xs font-semibold uppercase tracking-wider text-[#8C4A1E]">
                   Pricing &amp; Sizes
@@ -1262,7 +1275,6 @@ export interface LookbookPhoto {
                 }
               </div>
 
-              <!-- Specifications -->
               <div>
                 <div class="text-xs font-semibold uppercase tracking-wider text-[#6E4730] mb-1.5">Craft &amp; Specifications</div>
                 <ul class="space-y-1 text-xs text-[#5A3A28]">
@@ -1275,7 +1287,6 @@ export interface LookbookPhoto {
                 </ul>
               </div>
 
-              <!-- Fragrance Notes -->
               <div>
                 <div class="text-xs font-semibold uppercase tracking-wider text-[#6E4730] mb-1.5">Fragrance &amp; Ambience Notes</div>
                 <div class="flex flex-wrap gap-1.5">
@@ -1304,9 +1315,7 @@ export interface LookbookPhoto {
       </div>
     }
 
-    <!-- =================================================================== -->
-    <!-- STANDALONE IMAGE LIGHTBOX MODAL                                     -->
-    <!-- =================================================================== -->
+    <!-- STANDALONE IMAGE LIGHTBOX MODAL -->
     @if (lightboxImage(); as lb) {
       <div class="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm flex items-center justify-center p-4">
         <div class="bg-[#2A1810] text-white rounded-3xl max-w-3xl w-full overflow-hidden border border-[#E5A93C]/50 shadow-2xl">
@@ -1340,6 +1349,7 @@ export interface LookbookPhoto {
 export class App {
   readonly imgMap = IMG;
   readonly activePage = signal<'story' | 'catalog' | 'contact'>('story');
+  readonly mobileMenuOpen = signal<boolean>(false);
   readonly selectedCategory = signal<string>('all');
   readonly searchQuery = signal<string>('');
   readonly selectedProduct = signal<ProductItem | null>(null);
@@ -1397,11 +1407,7 @@ export class App {
       category: 'festive',
       categoryLabel: 'Festive & Traditional',
       image: IMG['img_12_27_57'],
-      secondaryImages: [
-        IMG['img_12_27_57'],
-        IMG['img_12_27_55_2'],
-        IMG['img_12_27_52']
-      ],
+      secondaryImages: [IMG['img_12_27_57'], IMG['img_12_27_55_2'], IMG['img_12_27_52']],
       price: 99,
       priceUnit: '/ piece',
       variants: [],
@@ -1419,10 +1425,7 @@ export class App {
       category: 'festive',
       categoryLabel: 'Festive & Traditional',
       image: IMG['img_12_27_55'],
-      secondaryImages: [
-        IMG['img_12_27_55'],
-        IMG['img_12_27_57']
-      ],
+      secondaryImages: [IMG['img_12_27_55'], IMG['img_12_27_57']],
       price: 179,
       priceUnit: '/ piece',
       variants: [],
@@ -1440,9 +1443,7 @@ export class App {
       category: 'wellness',
       categoryLabel: 'Wellness & Sachets',
       image: IMG['img_12_27_55_1'],
-      secondaryImages: [
-        IMG['img_12_27_55_1']
-      ],
+      secondaryImages: [IMG['img_12_27_55_1']],
       price: 329,
       priceUnit: '/ box of 7',
       variants: [],
@@ -1460,10 +1461,7 @@ export class App {
       category: 'festive',
       categoryLabel: 'Festive & Traditional',
       image: IMG['img_12_27_54_1'],
-      secondaryImages: [
-        IMG['img_12_27_54_1'],
-        IMG['img_12_27_55_2']
-      ],
+      secondaryImages: [IMG['img_12_27_54_1'], IMG['img_12_27_55_2']],
       price: 25,
       priceUnit: '/ piece',
       variants: [],
@@ -1481,10 +1479,7 @@ export class App {
       category: 'festive',
       categoryLabel: 'Festive & Traditional',
       image: IMG['img_12_27_53_2'],
-      secondaryImages: [
-        IMG['img_12_27_53_2'],
-        IMG['img_12_27_55_2']
-      ],
+      secondaryImages: [IMG['img_12_27_53_2'], IMG['img_12_27_55_2']],
       price: 25,
       priceUnit: '/ piece',
       variants: [],
@@ -1502,10 +1497,7 @@ export class App {
       category: 'festive',
       categoryLabel: 'Festive & Traditional',
       image: IMG['img_12_27_55_3'],
-      secondaryImages: [
-        IMG['img_12_27_55_3'],
-        IMG['img_12_27_55_2']
-      ],
+      secondaryImages: [IMG['img_12_27_55_3'], IMG['img_12_27_55_2']],
       price: 25,
       priceUnit: '/ piece',
       variants: [],
@@ -1523,10 +1515,7 @@ export class App {
       category: 'festive',
       categoryLabel: 'Festive & Traditional',
       image: IMG['img_12_27_54'],
-      secondaryImages: [
-        IMG['img_12_27_54'],
-        IMG['img_12_27_55_2']
-      ],
+      secondaryImages: [IMG['img_12_27_54'], IMG['img_12_27_55_2']],
       price: 15,
       priceUnit: '/ piece',
       variants: [],
@@ -1544,11 +1533,7 @@ export class App {
       category: 'jars',
       categoryLabel: 'Signature & Glitter Jars',
       image: IMG['img_12_27_54_2'],
-      secondaryImages: [
-        IMG['img_12_27_54_2'],
-        IMG['img_12_27_59_1'],
-        IMG['img_12_28_01']
-      ],
+      secondaryImages: [IMG['img_12_27_54_2'], IMG['img_12_27_59_1'], IMG['img_12_28_01']],
       price: 99,
       priceUnit: '/ box of 10',
       variants: [],
@@ -1566,11 +1551,7 @@ export class App {
       category: 'jars',
       categoryLabel: 'Signature & Glitter Jars',
       image: IMG['img_12_28_09'],
-      secondaryImages: [
-        IMG['img_12_28_09'],
-        IMG['img_12_28_00'],
-        IMG['img_12_28_02_1']
-      ],
+      secondaryImages: [IMG['img_12_28_09'], IMG['img_12_28_00'], IMG['img_12_28_02_1']],
       price: 49,
       priceUnit: '/ 30 ml (With Fragrance)',
       variants: [
@@ -1591,11 +1572,7 @@ export class App {
       category: 'jars',
       categoryLabel: 'Signature & Glitter Jars',
       image: IMG['img_12_27_56'],
-      secondaryImages: [
-        IMG['img_12_27_56'],
-        IMG['img_12_27_52'],
-        IMG['img_12_27_51']
-      ],
+      secondaryImages: [IMG['img_12_27_56'], IMG['img_12_27_52'], IMG['img_12_27_51']],
       price: 129,
       priceUnit: '(Starts at ₹29 for 30ml)',
       variants: [
@@ -1619,10 +1596,7 @@ export class App {
       category: 'jars',
       categoryLabel: 'Signature & Glitter Jars',
       image: IMG['img_12_27_52'],
-      secondaryImages: [
-        IMG['img_12_27_52'],
-        IMG['img_12_27_51']
-      ],
+      secondaryImages: [IMG['img_12_27_52'], IMG['img_12_27_51']],
       price: 99,
       priceUnit: '(30 ml ₹99 | 100 ml ₹199)',
       variants: [
@@ -1643,11 +1617,7 @@ export class App {
       category: 'coffee',
       categoryLabel: 'Coffee Collection',
       image: IMG['img_12_27_56'],
-      secondaryImages: [
-        IMG['img_12_27_56'],
-        IMG['img_12_27_52'],
-        IMG['img_12_27_51']
-      ],
+      secondaryImages: [IMG['img_12_27_56'], IMG['img_12_27_52'], IMG['img_12_27_51']],
       price: 49,
       priceUnit: '(30ml ₹49 | 100ml ₹149 | 200ml ₹259)',
       variants: [
@@ -1669,10 +1639,7 @@ export class App {
       category: 'coffee',
       categoryLabel: 'Coffee Collection',
       image: IMG['img_12_27_51'],
-      secondaryImages: [
-        IMG['img_12_27_51'],
-        IMG['img_12_27_52']
-      ],
+      secondaryImages: [IMG['img_12_27_51'], IMG['img_12_27_52']],
       price: 169,
       priceUnit: '(100 ml ₹169 | 200 ml ₹259)',
       variants: [
@@ -1693,10 +1660,7 @@ export class App {
       category: 'coffee',
       categoryLabel: 'Coffee Collection',
       image: IMG['img_12_27_52'],
-      secondaryImages: [
-        IMG['img_12_27_52'],
-        IMG['img_12_27_51']
-      ],
+      secondaryImages: [IMG['img_12_27_52'], IMG['img_12_27_51']],
       price: 199,
       priceUnit: '(100 ml ₹199 | 200 ml ₹299)',
       variants: [
@@ -1717,12 +1681,7 @@ export class App {
       category: 'wellness',
       categoryLabel: 'Wellness & Sachets',
       image: IMG['img_12_27_52_1'],
-      secondaryImages: [
-        IMG['img_12_27_52_1'],
-        IMG['img_12_27_52_2'],
-        IMG['img_12_27_53'],
-        IMG['img_12_27_53_1']
-      ],
+      secondaryImages: [IMG['img_12_27_52_1'], IMG['img_12_27_52_2'], IMG['img_12_27_53'], IMG['img_12_27_53_1']],
       price: 50,
       priceUnit: '/ piece',
       variants: [],
@@ -1740,11 +1699,7 @@ export class App {
       category: 'jars',
       categoryLabel: 'Signature & Glitter Jars',
       image: IMG['img_12_28_11'],
-      secondaryImages: [
-        IMG['img_12_28_11'],
-        IMG['img_12_28_11_1'],
-        IMG['img_12_28_01_2']
-      ],
+      secondaryImages: [IMG['img_12_28_11'], IMG['img_12_28_11_1'], IMG['img_12_28_01_2']],
       price: 149,
       priceUnit: '(100ml ₹149 | 200ml ₹259)',
       variants: [
@@ -1765,11 +1720,7 @@ export class App {
       category: 'jars',
       categoryLabel: 'Signature & Glitter Jars',
       image: IMG['img_12_28_02'],
-      secondaryImages: [
-        IMG['img_12_28_02'],
-        IMG['img_12_28_05'],
-        IMG['img_12_28_01']
-      ],
+      secondaryImages: [IMG['img_12_28_02'], IMG['img_12_28_05'], IMG['img_12_28_01']],
       price: 149,
       priceUnit: '(100ml ₹149 | 200ml ₹259)',
       variants: [
@@ -1790,11 +1741,7 @@ export class App {
       category: 'jars',
       categoryLabel: 'Signature & Glitter Jars',
       image: IMG['img_12_28_00_1'],
-      secondaryImages: [
-        IMG['img_12_28_00_1'],
-        IMG['img_12_28_00_2'],
-        IMG['img_12_28_10']
-      ],
+      secondaryImages: [IMG['img_12_28_00_1'], IMG['img_12_28_00_2'], IMG['img_12_28_10']],
       price: 149,
       priceUnit: '(100ml ₹149 | 200ml ₹259)',
       variants: [
@@ -1815,10 +1762,7 @@ export class App {
       category: 'wellness',
       categoryLabel: 'Wellness & Sachets',
       image: IMG['img_12_28_08_2'],
-      secondaryImages: [
-        IMG['img_12_28_08_2'],
-        IMG['img_12_28_09']
-      ],
+      secondaryImages: [IMG['img_12_28_08_2'], IMG['img_12_28_09']],
       price: 50,
       priceUnit: '/ card (or Custom Bulk Favor)',
       variants: [],
@@ -1836,9 +1780,7 @@ export class App {
       category: 'hampers',
       categoryLabel: 'Luxury Gift Hampers',
       image: IMG['img_12_27_57_1'],
-      secondaryImages: [
-        IMG['img_12_27_57_1']
-      ],
+      secondaryImages: [IMG['img_12_27_57_1']],
       price: null,
       priceUnit: 'Bespoke Hamper',
       variants: [],
@@ -1856,9 +1798,7 @@ export class App {
       category: 'hampers',
       categoryLabel: 'Luxury Gift Hampers',
       image: IMG['img_12_27_58'],
-      secondaryImages: [
-        IMG['img_12_27_58']
-      ],
+      secondaryImages: [IMG['img_12_27_58']],
       price: null,
       priceUnit: 'Bespoke Hamper',
       variants: [],
@@ -1876,10 +1816,7 @@ export class App {
       category: 'hampers',
       categoryLabel: 'Luxury Gift Hampers',
       image: IMG['img_12_28_08_1'],
-      secondaryImages: [
-        IMG['img_12_28_08_1'],
-        IMG['img_12_27_59']
-      ],
+      secondaryImages: [IMG['img_12_28_08_1'], IMG['img_12_27_59']],
       price: null,
       priceUnit: 'Call for Gift Box Price',
       variants: [],
@@ -2008,6 +1945,10 @@ export class App {
     }
   }
 
+  toggleMobileMenu(): void {
+    this.mobileMenuOpen.update(v => !v);
+  }
+
   openCategoryInCatalog(category: string): void {
     this.selectedCategory.set(category);
     this.setPage('catalog');
@@ -2107,7 +2048,7 @@ export class App {
         document.body.removeChild(ta);
       }
     } catch {
-      // Fallback handled silently in sandbox
+      // Fallback handled silently
     }
     this.showToast(message);
   }
