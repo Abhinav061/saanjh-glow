@@ -348,7 +348,7 @@ export interface LookbookPhoto {
                           Crafted in Sector-71, Noida
                         </p>
                         <p class="text-xs text-[#6E4730] mt-0.5">
-                          A-16/7, Shiv Shakti Apartments
+                          Make in India
                         </p>
                       </div>
                     </div>
@@ -952,12 +952,12 @@ export interface LookbookPhoto {
                 <div class="bg-white/10 backdrop-blur-sm p-5 rounded-2xl border border-white/20 space-y-2">
                   <div class="text-xs uppercase tracking-widest text-[#F7C873]">Our Noida Atelier Address</div>
                   <p class="font-serif-luxury text-xl font-semibold text-white leading-snug">
-                    A-16/7, Shiv Shakti Apartments, Sector-71, Noida
+                    Noida
                   </p>
                   <div class="flex items-center gap-2 pt-1">
                     <button
                       type="button"
-                      (click)="copyText('A-16/7, Shiv Shakti Apartments, Sector-71, Noida', 'Atelier address copied to clipboard!')"
+                      (click)="copyText('Noida', 'Atelier address copied to clipboard!')"
                       class="px-3.5 py-2 rounded-xl bg-white/15 hover:bg-white/25 text-white text-xs transition-colors"
                     >
                       📍 Copy Address
@@ -978,7 +978,7 @@ export interface LookbookPhoto {
                 <div class="space-y-1">
                   <h2 class="font-serif-luxury text-2xl font-bold text-[#2A1810]">Saanjh Glow Atelier</h2>
                   <p class="text-xs text-[#6E4730]">Instagram: <strong class="text-[#2A1810]">&#64;saanjh__glow</strong></p>
-                  <p class="text-xs text-[#5A3A28] font-medium">A-16/7, Shiv Shakti Apartments, Sector-71, Noida</p>
+                  <p class="text-xs text-[#5A3A28] font-medium">Noida</p>
                 </div>
                 <a
                   href="tel:+919456221293"
@@ -1110,7 +1110,7 @@ export interface LookbookPhoto {
                   <span class="w-7 h-7 rounded-full bg-[#2A1810] text-[#F7C873] font-bold flex items-center justify-center flex-shrink-0 text-xs">3</span>
                   <div>
                     <strong class="text-[#2A1810] block">Noida Pickup or Pan-India Delivery</strong>
-                    Collect directly from our studio at <strong class="text-[#2A1810]">A-16/7, Shiv Shakti Apartments, Sector-71, Noida</strong> or have your order safely shipped.
+                    Collect directly from our studio at <strong class="text-[#2A1810]">Noida</strong> or have your order safely shipped.
                   </div>
                 </li>
               </ol>
@@ -1119,7 +1119,7 @@ export interface LookbookPhoto {
                 <div class="text-xs font-semibold uppercase tracking-wider text-[#8C4A1E]">Studio Address &amp; Contact</div>
                 <p class="text-xs sm:text-sm text-[#2A1810] font-medium">
                   Saanjh Glow<br />
-                  A-16/7, Shiv Shakti Apartments, Sector-71, Noida
+                  Noida
                 </p>
                 <p class="text-xs sm:text-sm text-[#2A1810]">
                   Phone: <a href="tel:+919456221293" class="font-bold text-[#8C4A1E] underline">94562 21293</a>
@@ -1163,7 +1163,7 @@ export interface LookbookPhoto {
 
           <div class="md:col-span-4 space-y-2.5 text-xs sm:text-sm">
             <div class="font-semibold uppercase tracking-widest text-[#F7C873] text-xs">Order via Phone Call</div>
-            <p class="text-white font-medium">📍 A-16/7, Shiv Shakti Apartments, Sector-71, Noida</p>
+            <p class="text-white font-medium">📍 Noida</p>
             <p>📞 Phone: <a href="tel:+919456221293" class="text-[#F7C873] font-bold hover:underline">94562 21293</a></p>
             <div class="pt-1">
               <a
@@ -1178,7 +1178,7 @@ export interface LookbookPhoto {
 
         <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-[#9E8774]">
           <span>© 2026 Saanjh Glow • Handpoured • Made with Love • Made in India</span>
-          <span>A-16/7, Shiv Shakti Apartments, Sector-71, Noida • 94562 21293</span>
+          <span>Noida • 94562 21293</span>
         </div>
       </div>
     </footer>
@@ -1306,7 +1306,7 @@ export interface LookbookPhoto {
                   📞 Call to Order: 94562 21293
                 </a>
                 <p class="text-[11px] text-center text-[#6E4730]">
-                  Studio Pickup &amp; Pan-India Dispatch • A-16/7, Shiv Shakti Apartments, Sector-71, Noida
+                  Studio Pickup &amp; Pan-India Dispatch • Noida
                 </p>
               </div>
             </div>
@@ -2029,7 +2029,7 @@ export class App {
     );
     const summary = [
       'Saanjh Glow — Phone Order Inquiry (Call: 94562 21293)',
-      'Address: A-16/7, Shiv Shakti Apartments, Sector-71, Noida',
+      'Address: Noida',
       ...lines
     ].join('\n');
     this.copyText(summary, 'Order inquiry summary copied! Call 94562 21293 to place your order.');
